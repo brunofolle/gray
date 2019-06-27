@@ -36,26 +36,36 @@ Or install it yourself as:
 This template make with [Foundation 6](https://foundation.zurb.com/sites/docs/installation.html) using Flex Grid, and few [Building Blocks](https://foundation.zurb.com/building-blocks/). I used a monochromatic gray styles.
 
 **Pages**
+
 Contact Form by https://formspree.io/
+
 Categories Page
+
 Index with 20 posts (can be editable)
 
 **Plugins**
+
 [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
 
 **CSS Classes**
+
 [Foundation 6](https://foundation.zurb.com/sites/docs/installation.html)
+
 [Font Awesome](https://fontawesome.com)
 
 **Loading Contribution**
+
 [tobiasahlin](https://tobiasahlin.com/spinkit/)
 
 **Building Blocks Contributions**
+
 [STICKY NAV SHRINK HERO By Rafi](https://foundation.zurb.com/building-blocks/blocks/sticky-shrinknav.html)
+
 [ARTICLE CARD HOVER By Laurel Beyers](https://foundation.zurb.com/building-blocks/blocks/article-card-hover.html)
+
 [CSS MASONRY GRID By Rafi](https://foundation.zurb.com/building-blocks/blocks/masonry-css.html)
 
-##Demo
+## Demo
 
 In my personal blog I use same template but in portughese language.
 
