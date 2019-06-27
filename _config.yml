@@ -37,8 +37,8 @@ exclude: [
   'Gemfile', 
   'Gemfile.lock', 
   'node_modules', 
-  'Gemfile'
-  'gray.gemspec'
+  'Gemfile',
+  'gray.gemspec',
   'Gulpfife.js', 
   'package.json',
   'package-lock.json',
