@@ -1,0 +1,43 @@
+--- 
+layout: default # 1 - page layout
+permalink: /categories/  # 2 - permalink of page
+title: Categories # 3 - title of page
+navigation_weight: 1 # 4 - position on menu
+description: Categories # 5 - description of page
+---
+<main>
+    <section class="row">
+        <div class="small-12 large-10 large-offset-1">
+            <div class="row container-articles">
+                {% for category in site.categories %} 
+                    {% capture category_name %}{{ category | first }}{% endcapture %}
+                    <div class="small-12 columns margin-bottom-1" id="{{ category_name | slugize }}">
+                        <h1 class="separator-center">
+                            {{category_name | capitalize}}
+                        </h1>
+                    </div> 
+                    <div class=" masonry-css">
+                    {% for post in site.categories[category_name] %}
+                        <article class="masonry-css-item">
+                            <div class="card-article-hover radius card">
+                                <img src="{{post.imageminiature}}" alt="{{post.title}}">
+                                
+                                <div class="card-section">
+                                    <p class="meta-data article-subtext text-center">
+                                        {{ post.date | date: "%b %d, %Y" }}
+                                    </p>
+                                    <a href="{{post.url}}">
+                                        <h3 class="article-title separator-center">{{post.title}}</h3>
+                                    </a>
+                                    <p class="article-desc">{{post.excerpt}}</p>
+                                    <p class="text-center"><a class="button secondary radius" href="{{post.url}}">Read More</a></p>
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %} 
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{site.language}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 1 - get google site verification code -->
+    <meta name="google-site-verification" content="{{site.googleverify}}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Lobster|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{site.url}}/assets/css/app.min.css?v={{ "now" | date: "%Y%m%d%H%M%S" }}">
+    <script src="{{site.url}}/assets/js/app.min.js?v={{ "now" | date: "%Y%m%d%H%M%S" }}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/assets/images/favicon.png">
+    <!-- 2 - get google analitycs id -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{site.idanalitycs}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{site.idanalitycs}}');
+
+    </script>
+    <!-- 3 - plugin seo jekyll -->
+    {% seo %}
+</head>
+
+<body>
+    <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+        {% include menu-mobile.html %}
+    </div>
+
+    <div class="off-canvas-content" data-off-canvas-content></div>
+        <header class="sticky-shrinknav-header">
+            <div class="logo sticky-shrinknav-header-title">
+                {% if page.layout == 'index' %}
+                    {% if site.logo %}
+                        <img src="{{site.logo}}"/>
+                    {% else %}
+                        <h1 class="margin-0 padding-0">{{site.title}} </h1>
+                        <p>{{site.description}}</p>
+                        <i class="fas fa-chevron-down"></i>
+                    {% endif %}
+                {% else  %}
+                    {% if page.path contains '_posts' or '_page'%}
+                        <div class="img-post">
+                            <h1 class="separator-center">{{ page.title }}</h1>
+                            {% if page.path contains '_posts' %}
+                            <small class="font-roboto meta-data article-subtext text-center">Posted on {{ page.date | date: '%B %d, %Y' }}</small>
+                            {% endif %}
+                        </div>
+                    {% endif  %}
+                {% endif %}
+            </div>
+            {% include menu.html %}
+        </header>
+
+
+
+    <!-- 9 - modal of search -->
+    <div class="reveal full animated" id="search-modal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+        <div class="row">
+            <div class="small-12 large-8 large-offset-2 columns">
+                <input type="text" name="q" placeholder="Search" maxlength="255" id="search-input" />
+                <ul id="results-container" class="no-bullet">
+
+                </ul>
+            </div>
+        </div>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>

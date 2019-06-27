@@ -1,0 +1,63 @@
+---
+layout: index
+---
+
+<main class="row">
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-12 columns margin-bottom-2">
+                <h1 class="separator-center">Posts</h1>
+            </div>
+            <div class="masonry-css">
+                {% for post in paginator.posts  %}
+                <article class="masonry-css-item">
+                    <div class="card-article-hover radius card">
+                        <img src="{{post.imageminiature}}" alt="{{post.title}}">
+                        
+                        <div class="card-section">
+                            <p class="meta-data article-subtext text-center">
+                                {{ post.date | date: "%b %d, %Y" }}
+                            </p>
+                            <a href="{{post.url}}">
+                                <h3 class="article-title separator-center">{{post.title}}</h3>
+                            </a>
+                            <p class="article-desc">{{post.excerpt}}</p>
+                            <p class="text-center"><a class="button secondary radius" href="{{post.url}}">Read More</a></p>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+
+            <div class="small-12 columns text-center padding-2">
+                {% if paginator.previous_page %}
+                    <a class="secondary button radius previous" href="{{ paginator.previous_page_path }}">
+                        <i class="fas fa-arrow-left"></i>
+                        Previous Page
+                    </a>
+                {% else %}
+                    <a class="secondary button radius" disabled>
+                        <i class="fas fa-arrow-left"></i>
+                        Previous Page
+                    </a>
+                {% endif %}
+
+                {% if paginator.next_page %}
+                    <a class="secondary button radius next" href="{{ paginator.next_page_path }}">
+                        Next Page
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                {% else %}
+                    <a class="secondary button radius" disabled>
+                        Next Page
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+
+
+

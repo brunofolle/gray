@@ -1,0 +1,70 @@
+[
+  
+    {
+      "title"    : "Guide Styles",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "http://localhost:4000/guide-styles/",
+      "date"     : "2019-06-27 00:00:00 +0200",
+      "content"  : "Guide styles for this template.This is a paragraphThis is another paragraphHeader 1Header 2Header 3Header 4Header 5Header 6This is a Link StyleThis is a boldAnd this is italicThis is codeThis is a piece of code in a blockThis is a image exampleBullet list  Item  Item          Item      Numered List  Item  Item          Item      Mixed Lists  Item  Item          Mixed      Mixed        ItemBlockquotes  Quoted text.      Quoted quote.        Quoted    List  Syntax highlighting#button {    border: none;}Definition Lists  WordPress  A semantic personal publishing platform  Markdown  Text-to-HTML conversion toolAbbreviationsMarkdown converts text to HTML.This is a horizontal line"
+    } ,
+  
+    {
+      "title"    : "Welcome to Jekyll!",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "http://localhost:4000/welcome-to-jekyll/",
+      "date"     : "2019-06-27 00:00:00 +0200",
+      "content"  : "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post.ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.Jekyll also offers powerful support for code snippets:def print_hi(name)  puts \"Hi, #{name}\"endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT.Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk."
+    } 
+  
+  ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+        "title"    : "Categories",
+        "category" : "",
+        "tags"     : "",
+        "url"      : "http://localhost:4000/categories/",
+        "date"     : "",
+        "content"  : ""
+     
+   } ,
+  
+   {
+     
+        "title"    : "Contact",
+        "category" : "",
+        "tags"     : "",
+        "url"      : "http://localhost:4000/contact/",
+        "date"     : "",
+        "content"  : ""
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+   } 
+  
+]
+

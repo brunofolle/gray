@@ -1,0 +1,59 @@
+        <!-- 1 - social networks -->
+        <footer class="row expanded">
+            <div class="small-12 columns padding-2">
+                <div class="row">
+                    <div class="small-12 large-6 text-center columns">
+                        <h3 class="separator-center">About me</h3>
+                        {% include about-me.html %}
+                    </div>
+                    <div class="small-12 large-6 columns">
+                        <h3 class="separator-center">Recent Posts</h3>
+                        <ul class="no-bullet">
+                            {% for post in site.posts offset:0 limit:10%}
+                            <li>
+                                <a href="{{post.url}}">{{post.title}}</a>
+                            </li> 
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 - my assignature -->
+            <div class="small-12">
+                <p class="text-center">
+                    <small>
+                        <i>
+                            Developed with <i class="fas fa-heart"></i> and <a target="_blank" href="">Jekyll</a> by <a target="_blank" href="brunofolle.com.br">Bruno Folle</a>
+                        </i>
+                    </small>
+                </p>
+            </div>
+        </footer>
+        <!-- 3 - button back to top -->
+        <div id="back-top">
+            <a><i class="fas fa-arrow-up"></i></a>
+        </div>
+        <!-- 4 - loading site -->
+        <div class="overlay">
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // search jekyll
+    var sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json'
+    });
+</script>

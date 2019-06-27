@@ -1,0 +1,22 @@
+--- 
+layout: page # 1 - page layout
+title: Contact # 3 - title of page
+permalink: /contact/ # 3 - permalink of page
+navigation_weight: 2 # 4 - position on menu
+description: Contact # 5 - description of page
+---
+
+
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vero molestiae cum ut provident impedit quo, nemo consequatur saepe fuga, cumque alias? Odit sint quo eveniet autem illum totam dicta!
+</p>
+<div class="row margin-top-2 margin-bottom-2">
+    <div class="small-12 large-6 large-offset-3 columns">
+        <form method="POST" action="https://formspree.io/{{site.emailform}}">
+            <input name="email" placeholder="Your email" type="email">
+            <textarea name="message" placeholder="Your message"></textarea>
+            <button type="submit" class="button secondary button expanded">Send</button>
+        </form>
+    </div>
+</div>
+        

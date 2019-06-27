@@ -1,0 +1,25 @@
+<nav>
+    <ul class="menu align-center sticky-shrinknav-menu">
+        <li class="text-center align-self-middle hide-for-small-only">
+            <a class="{% if page.url == '/' %} active{% endif %}" href="{{site.url}}">Home</a>
+        </li>
+        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+        {% for p in navigation_pages %}
+            {% if p.navigation_weight %}
+                <li class="text-center align-self-middle">
+                    <a class="hide-for-small-only {% if p.url == page.url %} active{% endif %}" href="{{site.url}}{{ p.url}}">
+                        {{ p.title }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+        <li class="text-center align-self-middle hide-for-small-only">
+            <a>
+                <i data-open="search-modal" class="fas fa-search"></i>
+            </a>
+        </li>
+        <li class="text-center align-self-middle  show-for-small-only">
+            <i class="fas fa-bars" data-toggle="offCanvas"></i>
+        </li>
+    </ul>
+</nav>

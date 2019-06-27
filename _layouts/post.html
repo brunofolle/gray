@@ -1,0 +1,24 @@
+{% include header.html %}
+<!-- 2 - content of post -->
+<main>
+    <section class="row ">
+        <article class="small-12 large-8 large-offset-2 columns margin-bottom-2" >
+            <div class="post-content callout">
+                {{ content }}
+                <p>
+                    {% for category in page.categories %}
+                        <a class="hollow button secondary" href="{{site.url}}/categories/#{{category|slugize}}">
+                            #{{category}}</a>
+                        {% unless forloop.last %}&nbsp;{% endunless %}
+                    {% endfor %}
+                </p>
+            </div>
+            <div class="row share-content">
+                {% include share.html %}
+            </div>
+        </article>
+    </section>
+</main>
+<!-- 3 - includes disqus and footer -->
+{% include disqus.html %}
+{% include footer.html %}
